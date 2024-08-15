@@ -1,0 +1,10 @@
+prompt = require("prompt-sync")()
+
+let name = prompt("digite o nome do produto: ")
+let price = parseFloat(prompt("digite o preço do produto: "))
+let amount = parseInt(prompt("quantos desse você vai levar? "))
+let dis = parseFloat(prompt('qual a porcentagem de desconto? '))
+let price2 = (price * amount)
+let dis2 = (dis/100 * price2)
+let total = price2 - (dis/100 * price2)
+console.log('o preço após o desconto será de:', total, 'reais, você está levando', amount, 'unidades de', name, 'que originalmente custa', price, 'reais, com um desconto de', dis2,'reais' )
